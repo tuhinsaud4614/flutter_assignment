@@ -1,0 +1,4 @@
+db name: wpbdb
+username: wordpress
+password: Wordpress_123
+Table Prefix: wpb_

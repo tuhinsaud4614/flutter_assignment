@@ -1,0 +1,18 @@
+
+# BEGIN WordPress
+# The directives (lines) between `BEGIN WordPress` and `END WordPress` are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /wordpress_back/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /wordpress_back/index.php [L]
+</IfModule>
+
+# END WordPress
+
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Methods "GET,POST,OPTIONS,DELETE,PUT"
